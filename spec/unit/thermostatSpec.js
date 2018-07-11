@@ -30,6 +30,10 @@ var thermostat;
     expect(function() { thermostat.down(12); }).toThrowError('Cannot reduce temperature: temperature too low');
   });
 
+  it("throws an error when user sets temperature above maximum", function() {
+    expect(function() { thermostat.up(14); }).toThrowError('Cannot increase temperature: temperature too high');
+  });
+
   it("can turn power saving mode on", function() {
     thermostat.powerSavingModeOn();
     expect(thermostat.maxTemp).toEqual(25);
@@ -42,5 +46,11 @@ var thermostat;
 
   it("power saving mode is on by deault", function() {
     expect(thermostat.maxTemp).toEqual(25);
+  });
+
+  it("can reset temperature back to 20", function() {
+    thermostat.down(3);
+    thermostat.reset();
+    expect(thermostat.temperature).toEqual(20);
   });
 });

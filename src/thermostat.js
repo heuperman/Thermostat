@@ -8,6 +8,9 @@ function Thermostat() {
 }
 
 Thermostat.prototype.up = function(degrees){
+  if((this.temperature + degrees) > this.maxTemp) {
+    throw new Error('Cannot increase temperature: temperature too high');
+  }
   this.temperature += degrees;
 };
 
@@ -26,4 +29,8 @@ Thermostat.prototype.powerSavingModeOn = function(){
 Thermostat.prototype.powerSavingModeOff = function(){
   this.powerSavingMode = false;
   this.maxTemp = 32;
+};
+
+Thermostat.prototype.reset = function() {
+  this.temperature = 20;
 };
