@@ -31,12 +31,16 @@ var thermostat;
   });
 
   it("can turn power saving mode on", function() {
-    thermostat.powerSavingMode();
+    thermostat.powerSavingModeOn();
     expect(thermostat.maxTemp).toEqual(25);
   });
 
   it("can turn power saving mode off", function() {
     thermostat.powerSavingModeOff();
     expect(thermostat.maxTemp).toEqual(32);
+  });
+
+  it("power saving mode is on by deault", function() {
+    expect(thermostat.maxTemp).toEqual(25);
   });
 });
