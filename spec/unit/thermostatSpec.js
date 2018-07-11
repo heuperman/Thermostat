@@ -34,4 +34,9 @@ var thermostat;
     thermostat.powerSavingMode();
     expect(thermostat.maxTemp).toEqual(25);
   });
+
+  it("can turn power saving mode off", function() {
+    thermostat.powerSavingModeOff();
+    expect(thermostat.maxTemp).toEqual(32);
+  });
 });

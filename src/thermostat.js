@@ -19,3 +19,7 @@ Thermostat.prototype.down = function(degrees){
 Thermostat.prototype.powerSavingMode = function(){
   this.maxTemp = 25;
 };
+
+Thermostat.prototype.powerSavingModeOff = function(){
+  this.maxTemp = 32;
+};
