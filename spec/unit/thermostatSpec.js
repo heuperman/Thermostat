@@ -23,7 +23,7 @@ var thermostat;
   });
 
   it("it has a minimum temperature of 10 degrees", function() {
-    expect(thermostat.minTemp).toEqual(10);
+    expect(thermostat.MINIMUM_TEMPERATURE).toEqual(10);
   });
 
   it("throws an error when user sets temperature below minimum", function() {
@@ -42,10 +42,11 @@ var thermostat;
   it("can turn power saving mode off", function() {
     thermostat.powerSavingModeOff();
     expect(thermostat.maxTemp).toEqual(32);
+    expect(thermostat.powerSavingMode).toEqual(false);
   });
 
   it("power saving mode is on by deault", function() {
-    expect(thermostat.maxTemp).toEqual(25);
+    expect(thermostat.powerSavingMode).toEqual(true);
   });
 
   it("can reset temperature back to 20", function() {

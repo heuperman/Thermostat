@@ -1,8 +1,9 @@
 'user strict';
 
 function Thermostat() {
-  this.temperature = 20;
-  this.minTemp = 10;
+  this.DEFAULT_TEMPERATURE = 20;
+  this.temperature = this.DEFAULT_TEMPERATURE;
+  this.MINIMUM_TEMPERATURE = 10;
   this.maxTemp = 25;
   this.powerSavingMode = true;
 }
@@ -15,7 +16,7 @@ Thermostat.prototype.up = function(degrees){
 };
 
 Thermostat.prototype.down = function(degrees){
-  if((this.temperature - degrees) < this.minTemp) {
+  if((this.temperature - degrees) < this.MINIMUM_TEMPERATURE) {
     throw new Error('Cannot reduce temperature: temperature too low');
   }
   this.temperature -= degrees;
