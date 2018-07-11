@@ -53,4 +53,21 @@ var thermostat;
     thermostat.reset();
     expect(thermostat.temperature).toEqual(20);
   });
+
+  it("knows when energy usage is low", function() {
+    thermostat.down(5);
+    expect(thermostat.currentEnergyUsage()).toEqual("low-usage");
+  });
+
+  it("knows when energy usage is medium", function() {
+    expect(thermostat.currentEnergyUsage()).toEqual("medium-usage");
+  });
+
+  it("knows when energy usage is high", function() {
+    thermostat.powerSavingModeOff();
+    thermostat.up(7);
+    expect(thermostat.currentEnergyUsage()).toEqual("high-usage");
+  });
+
+
 });
