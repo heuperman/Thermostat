@@ -29,4 +29,9 @@ var thermostat;
   it("throws an error when user sets temperature below minimum", function() {
     expect(function() { thermostat.down(12); }).toThrowError('Cannot reduce temperature: temperature too low');
   });
+
+  it("can turn power saving mode on", function() {
+    thermostat.powerSavingMode();
+    expect(thermostat.maxTemp).toEqual(25);
+  });
 });
