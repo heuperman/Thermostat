@@ -69,6 +69,4 @@ var thermostat;
     thermostat.up(7);
     expect(thermostat.currentEnergyUsage()).toEqual("high-usage");
   });
-
-
 });
