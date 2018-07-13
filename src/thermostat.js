@@ -36,6 +36,14 @@ Thermostat.prototype.reset = function() {
   this.temperature = this.DEFAULT_TEMPERATURE;
 };
 
+Thermostat.prototype.isPSMon = function() {
+  if(this.powerSavingMode == true) {
+    return "on";
+  } else {
+    return "off";
+  }
+};
+
 Thermostat.prototype.currentEnergyUsage = function() {
   if(this.temperature > 25) {
     return "high-usage";

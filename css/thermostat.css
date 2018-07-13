@@ -1,0 +1,109 @@
+body {
+    background-color: lightgray;
+    max-width: 500px;
+    margin: auto;
+}
+
+h1 {
+  font-family: DIN alternate;
+  font-size: 20px;
+}
+
+p {
+    font-family: DIN alternate;
+    font-size: 20px;
+    text-align: : center;
+}
+
+#display_temperature {
+  font-family: DIN alternate;
+  font-size: 60px;
+  text-align: : center;
+  border-bottom: 4px solid black;
+}
+
+#decrease_temperature {
+    background-color: #33844d;
+    border: none;
+    color: white;
+    padding: 10px 22px;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+}
+
+#increase_temperature {
+    background-color: #c93638;
+    border: none;
+    color: white;
+    padding: 10px 22px;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+}
+
+#PSM_on {
+    background-color: white;
+    border: none;
+    color: #33844d;
+    padding: 10px 22px;
+    border-radius: 8px;
+    border: 2px solid #33844d;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+}
+
+#PSM_on:hover {
+    background-color: #33844d;
+    color: white;
+  }
+
+#PSM_off {
+    background-color: white;
+    border: none;
+    color: #c93638;
+    padding: 10px 22px;
+    border-radius: 8px;
+    border: 2px solid #c93638;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+}
+
+#PSM_off:hover {
+    background-color: #c93638;
+    color: white;
+  }
+
+
+#reset_temperature {
+    background-color: white;
+    border: none;
+    color: black;
+    padding: 10px 22px;
+    border-radius: 8px;
+    border: 2px solid black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+}
+
+.low-usage {
+  color: #33844d;
+}
+
+.medium-usage {
+  color: black;
+}
+
+.high-usage {
+  color: #c93638;
+}
