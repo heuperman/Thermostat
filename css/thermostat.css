@@ -1,95 +1,106 @@
 body {
-    background-color: lightgray;
     max-width: 500px;
     margin: auto;
+    background: black;
 }
 
 h1 {
   font-family: DIN alternate;
   font-size: 20px;
+  color: white;
 }
 
 p {
     font-family: DIN alternate;
     font-size: 20px;
-    text-align: : center;
+    color: white;
 }
 
 #display_temperature {
   font-family: DIN alternate;
   font-size: 60px;
-  text-align: : center;
-  border-bottom: 4px solid black;
+  border-bottom: 4px solid white;
 }
 
 #decrease_temperature {
-    background-color: #33844d;
-    border: none;
-    color: white;
-    padding: 10px 22px;
-    border-radius: 8px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 24px;
+  background-color: black;
+  color: white;
+  padding: 10px 22px;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  border: 2px solid white;
+}
+
+#decrease_temperature:hover {
+  background-color: black;
+  color: #33844d;
+  border: 2px solid #33844d;
 }
 
 #increase_temperature {
-    background-color: #c93638;
-    border: none;
-    color: white;
-    padding: 10px 22px;
-    border-radius: 8px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 24px;
+  background-color: black;
+  color: white;
+  padding: 10px 22px;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  border: 2px solid white;
 }
 
+#increase_temperature:hover {
+    background-color: black;
+    color: #c93638;
+    border: 2px solid #c93638;
+  }
+
 #PSM_on {
-    background-color: white;
-    border: none;
-    color: #33844d;
-    padding: 10px 22px;
-    border-radius: 8px;
-    border: 2px solid #33844d;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 24px;
+  background-color: black;
+  color: white;
+  padding: 10px 22px;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  border: 2px solid white;
 }
 
 #PSM_on:hover {
-    background-color: #33844d;
-    color: white;
-  }
+  background-color: black;
+  color: #33844d;
+  border: 2px solid #33844d;
+}
 
 #PSM_off {
-    background-color: white;
-    border: none;
-    color: #c93638;
-    padding: 10px 22px;
-    border-radius: 8px;
-    border: 2px solid #c93638;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 24px;
+  background-color: black;
+  color: white;
+  padding: 10px 22px;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  border: 2px solid white;
 }
 
 #PSM_off:hover {
-    background-color: #c93638;
-    color: white;
+    background-color: black;
+    color: #c93638;
+    border: 2px solid #c93638;
   }
 
-
 #reset_temperature {
-    background-color: white;
+    background-color: black;
     border: none;
-    color: black;
+    color: white;
     padding: 10px 22px;
     border-radius: 8px;
-    border: 2px solid black;
+    border: 2px solid white;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -101,7 +112,7 @@ p {
 }
 
 .medium-usage {
-  color: black;
+  color: white;
 }
 
 .high-usage {

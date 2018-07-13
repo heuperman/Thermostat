@@ -2,10 +2,9 @@ $(document).ready(function() {
   var thermostat = new Thermostat();
   updateTemperature();
   updatePSM();
-  $.get("http://api.openweathermap.org/data/2.5/weather?id=2643743&APPID=1fe31de9612083abc4be2d912d1df45e&units=metric", function(data) {
+  $.get("http://api.openweathermap.org/data/2.5/weather?q=london&APPID=1fe31de9612083abc4be2d912d1df45e&units=metric", function(data) {
     $("#outside_temperature").text(data.main.temp);
   });
-
 
   $( "#increase_temperature" ).click(function() {
     if(thermostat.temperature >= thermostat.maxTemp) {
@@ -36,6 +35,14 @@ $(document).ready(function() {
   $( "#reset_temperature" ).click(function() {
     thermostat.reset();
     updateTemperature();
+  });
+
+  $('#city_form').submit(function(event) {
+    event.preventDefault();
+    var city = $('#city').val();
+    $.get('http://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=1fe31de9612083abc4be2d912d1df45e&units=metric', function(data) {
+      $('#outside_temperature').text(data.main.temp);
+    });
   });
 
   function updateTemperature() {
